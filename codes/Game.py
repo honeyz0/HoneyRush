@@ -18,8 +18,18 @@ class Game:
     def run(self, ):
         while True:
             menu = Menu(self.window)
-            menu.run()
-            pass
+            menu_return = menu.run()
 
+            if menu_return == MENU_OPTION[0]: # Menu "PLAY GAME" option
+                level = Level(self.window, 'LevelStandard', menu_return)
+                level_return = level.run()
 
+            elif menu_return == MENU_OPTION[1]: # Menu "TUTORIAL" option
+                pass
+
+            elif menu_return == MENU_OPTION[2]: # Menu "EXIT" option
+                pygame.quit() # Close Window
+                quit() # End Pygame
+            else:
+                pass
 
