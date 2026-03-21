@@ -1,11 +1,22 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
-from code.Entity import Entity
+from codes.Const import WIN_WIDTH
+from codes.Background import Background
 
 class EntityFactory:
-    def __init__(self):
-        pass
+    '''
+    Create random entitys
+    '''
+    @staticmethod
+    def get_entity(entity_name: str):
+        match entity_name:
+            case 'LevelStandard':
+                list_LevelStandard = []
 
-    def get_entity(self, entity_type):
-        pass
+                for i in range(3):
+                    list_LevelStandard.append(Background(f'LevelStandard_{i}', (0, 0)))
+                    list_LevelStandard.append(Background(f'LevelStandard_{i}', (WIN_WIDTH, 0)))
+
+                return list_LevelStandard
+
+

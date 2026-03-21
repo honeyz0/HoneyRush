@@ -1,10 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from rich import print
 import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from codes.Const import WIN_WIDTH, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
+from codes.Const import WIN_WIDTH, MENU_OPTION, TUTORIAL_TEXT, COLOR_WHITE, COLOR_YELLOW
 
 class Menu:
     '''
@@ -14,7 +15,7 @@ class Menu:
         self.window = window
 
         originalLogo = pygame.image.load('./assets/GameLogo.png')
-        self.surf = pygame.image.load('./assets/HoneyRush_MenuBackground.png')
+        self.surf = pygame.image.load('./assets/MenuBackground.png')
 
         self.logo = pygame.transform.smoothscale_by(originalLogo, 0.2)
 
@@ -36,6 +37,9 @@ class Menu:
                     self.menu_text(35, MENU_OPTION[i], COLOR_YELLOW, ((WIN_WIDTH/2), 350 + 55 * i))
                 else:
                     self.menu_text(35, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 350 + 55 * i))
+
+            for i in range(len(TUTORIAL_TEXT)):
+                self.menu_text(15, TUTORIAL_TEXT[i], COLOR_WHITE, (100, 460 + 20 * i))
 
             pygame.display.flip()
 

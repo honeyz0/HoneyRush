@@ -6,6 +6,7 @@ import pygame
 
 from codes.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from codes.Menu import Menu
+from codes.Level import Level
 
 class Game:
     '''
