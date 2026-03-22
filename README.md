@@ -1,12 +1,15 @@
 # 🍯Honey Hush - Demo
 *Honey Rush* é um jogo de colheita em estilo pixel art desenvolvido em Python com a biblioteca Pygame. O jogador controla uma abelha que deve coletar flores em um cenário infinito enquanto desvia de predadores.
-![img.png](img.png)
+![img_1.png](img_1.png)
 ## 🎮 O Jogo
 **Objetivo:** Coletar o máximo de flores possível para *ganhar pontos*.
 
 **Controles:** Movimentação pelas teclas de seta.
 
 **Desafio:** *Desviar dos inimigos* que tentam te capturar.
+
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
 
 ### 🚀 Tecnologias utilizadas neste projeto
 **Linguagem:** Python.
@@ -22,7 +25,10 @@
 
 ## 💬 Notas pessoais
 
--
+Baita desafio! Precisei dar um passo atrás e estudar 
+novamente o que é POO para conseguir fazer as coisas 
+funcionarem no Pygame. Mas no final deu certo e foi 
+muito divertido todo o processo de criação.
 
 ## 💛 Autoria
 
