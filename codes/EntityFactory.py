@@ -11,7 +11,7 @@ from codes.FlowerXP import FlowerXP
 
 class EntityFactory:
     '''
-    Create random entitys
+    Create random entities
     '''
 
     @staticmethod

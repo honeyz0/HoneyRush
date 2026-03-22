@@ -9,7 +9,7 @@ from pygame.font import Font
 from codes.EntityMediator import EntityMediator
 from codes.Const import (COLOR_WHITE, COLOR_YELLOW, WIN_HEIGHT,
                          WIN_WIDTH, MENU_OPTION, EVENT_ENEMY,
-                         EVENT_FLOWER, COLOR_RED)
+                         EVENT_FLOWER, COLOR_RED, COLOR_GREEN)
 from codes.Entity import Entity
 from codes.EntityFactory import EntityFactory
 from codes.Player import Player
@@ -18,6 +18,9 @@ from codes.Player import Player
 class Level:
     def __init__(self, window, name, gameMode):
         self.window = window
+        self.game_over_surf = pygame.image.load('./assets/BlindBackground.png').convert_alpha()
+        self.game_over_rect = self.game_over_surf.get_rect(left=0, top=0)
+
         self.name = name
         self.gameMode = gameMode
         self.entityList: list[Entity] = []
@@ -36,19 +39,19 @@ class Level:
         self.timeout = 20000
         self.score = 0
 
+
     def run(self):
         pygame.mixer_music.load('./assets/Game.wav')
         pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
         while True:
-            clock.tick(45)
+            clock.tick(35)
             for ent in self.entityList:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
                 if ent.name == 'Player':
-                    self.level_text(15, f'Health: {ent.health}s', COLOR_WHITE, ((WIN_WIDTH - 895), 28))
+                    self.level_text(15, f'Health: {ent.health}', COLOR_GREEN, ((WIN_WIDTH - 895), 28))
 
-            # Check for all events
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -60,11 +63,11 @@ class Level:
 
                 player_alive = any(isinstance(ent, Player) for ent in self.entityList)
                 if not player_alive:
-                    return self.show_game_over()  # Retorna para o Game decidir o fluxo
+                    return self.show_game_over()
 
             self.level_text(15, f'Timeout: {self.timeout / 1000 :.1f}s', COLOR_WHITE, ((WIN_WIDTH - 880), 15))
-            self.level_text(15, f'FPS: {clock.get_fps() :.0f}', COLOR_WHITE, (40, WIN_HEIGHT - 38))
-            self.level_text(15, f'Entidades: {len(self.entityList)}', COLOR_WHITE, (60, WIN_HEIGHT - 20))
+            self.level_text(15, f'FPS: {clock.get_fps() :.0f}', COLOR_WHITE, (40, WIN_HEIGHT - 20))
+            #self.level_text(15, f'Entidades: {len(self.entityList)}', COLOR_WHITE, (60, WIN_HEIGHT - 20))
             self.level_text(20, f'Score: {self.score}', COLOR_YELLOW, (WIN_WIDTH / 2, 50))
             pygame.display.flip()
 
@@ -82,7 +85,7 @@ class Level:
         pygame.mixer_music.load('./assets/GameOver.wav')
         pygame.mixer_music.play(-1)
         while True:
-            self.window.fill((0, 0, 0))
+            self.window.blit(source=self.game_over_surf, dest=self.game_over_surf.get_rect())
             self.level_text(70, "GAME OVER", COLOR_RED , (WIN_WIDTH / 2, WIN_HEIGHT / 2 - 100))
             self.level_text(30, f"Final Score: {self.score}", COLOR_WHITE, (WIN_WIDTH / 2, WIN_HEIGHT / 2 + 30))
             self.level_text(20, "Press ENTER to Try Again or ESC for Exit", COLOR_WHITE,
@@ -92,7 +95,7 @@ class Level:
             for event in pygame.event.get():
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_RETURN: return MENU_OPTION[0]  # Try Again (Play)
-                    if event.key == pygame.K_ESCAPE: return "MENU"  # Volta ao menu
+                    if event.key == pygame.K_ESCAPE: return "Exit"
                 if event.type == pygame.QUIT:
                     pygame.quit();
                     sys.exit()

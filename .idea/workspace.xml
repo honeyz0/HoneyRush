@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71d40a5d-7ec5-4a34-9413-3c90a57710a5" name="Changes" comment="TestOne">
+    <list default="true" id="71d40a5d-7ec5-4a34-9413-3c90a57710a5" name="Changes" comment="Demo1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/Const.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/Const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/Game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/EntityFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/EntityFactory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codes/Level.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/Level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codes/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codes/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/codes/Player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +120,7 @@
       <workItem from="1773718940335" duration="217000" />
       <workItem from="1773719160202" duration="363000" />
       <workItem from="1773719527203" duration="193000" />
-      <workItem from="1773719749578" duration="67809000" />
+      <workItem from="1773719749578" duration="73029000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit">
       <option name="closed" value="true" />
@@ -170,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774147094538</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Demo1">
+      <option name="closed" value="true" />
+      <created>1774155983701</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1774155983701</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,13 +212,14 @@
     <MESSAGE value="BackgroundParallax" />
     <MESSAGE value="Enemys &amp; XPs" />
     <MESSAGE value="TestOne" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestOne" />
+    <MESSAGE value="Demo1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Demo1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/HoneyHush$menu.coverage" NAME="menu Coverage Results" MODIFIED="1773627453486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/HoneyHush$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1773711632852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/HoneyRush$Entity.coverage" NAME="Entity Coverage Results" MODIFIED="1773888589510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
-    <SUITE FILE_PATH="coverage/HoneyRush$main.coverage" NAME="main Coverage Results" MODIFIED="1774155583782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HoneyRush$main.coverage" NAME="main Coverage Results" MODIFIED="1774196203466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HoneyRush$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1773830581884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/HoneyRush$Level.coverage" NAME="Level Coverage Results" MODIFIED="1774126430218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/codes" />
     <SUITE FILE_PATH="coverage/HoneyHush$main.coverage" NAME="main Coverage Results" MODIFIED="1773716502507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

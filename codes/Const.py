@@ -13,7 +13,7 @@ ENTITY_SPEED = {
     'LevelStandard_0': 0,
     'LevelStandard_1': 2,
     'LevelStandard_2': 1,
-    'Player': 5,
+    'Player': 6,
     'Enemy': 12,
     'FlowerXP': 8
 }
@@ -34,9 +34,9 @@ ENTITY_DAMAGE ={
     'LevelStandard_0': 0,
     'LevelStandard_1': 0,
     'LevelStandard_2': 0,
-    'Player': 1,
-    'Enemy': 1,
-    'FlowerXP': 1
+    'Player': 0,
+    'Enemy': 10,
+    'FlowerXP': 0
 }
 
 ENTITY_SCORE ={
