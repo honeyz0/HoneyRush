@@ -5,6 +5,8 @@ COLOR_WHITE = (255, 255, 255)
 COLOR_YELLOW = (255, 164, 7)
 COLOR_GREEN = (0, 255, 0)
 COLOR_BLUE = (0, 0, 255)
+COLOR_RED = (255, 0, 0)
+COLOR_GREY = (245, 245, 245)
 
 #E
 ENTITY_SPEED = {
@@ -17,7 +19,7 @@ ENTITY_SPEED = {
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
-EVENT_FLOWER = pygame.USEREVENT + 1
+EVENT_FLOWER = pygame.USEREVENT + 2
 
 ENTITY_HEALTH = {
     'LevelStandard_0': 999,
@@ -48,13 +50,10 @@ ENTITY_SCORE ={
 
 # M
 MENU_OPTION = ('PLAY GAME',
-               'TUTORIAL',
+               'OPTIONS',
                'EXIT')
 
-TUTORIAL_TEXT = ('- Cima',
-                 '- Baixo',
-                 '- Frente',
-                 '- Trás')
+TUTORIAL_TEXT = ('Press UP, DOWN, LEFT, RIGHT --- to control your player')
 
 # W
 WIN_WIDTH = 950

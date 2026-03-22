@@ -4,7 +4,7 @@
 import sys
 import pygame
 
-from codes.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
+from codes.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION, COLOR_BLUE
 from codes.Menu import Menu
 from codes.Level import Level
 
@@ -24,13 +24,16 @@ class Game:
             if menu_return == MENU_OPTION[0]: # Menu "PLAY GAME" option
                 level = Level(self.window, 'LevelStandard', menu_return)
                 level_return = level.run()
+                if level_return == 'MENU':
+                    break
 
-            elif menu_return == MENU_OPTION[1]: # Menu "TUTORIAL" option
+            elif menu_return == MENU_OPTION[1]: # Menu "OPTIONS" option
                 pass
 
             elif menu_return == MENU_OPTION[2]: # Menu "EXIT" option
                 pygame.quit() # Close Window
-                quit() # End Pygame
+                sys.exit() # End Pygame
             else:
                 pass
+
 

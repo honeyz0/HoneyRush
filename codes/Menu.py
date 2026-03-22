@@ -5,7 +5,8 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from codes.Const import WIN_WIDTH, MENU_OPTION, TUTORIAL_TEXT, COLOR_WHITE, COLOR_YELLOW
+from codes.Const import WIN_WIDTH, MENU_OPTION, TUTORIAL_TEXT, COLOR_WHITE, COLOR_YELLOW, COLOR_GREY
+
 
 class Menu:
     '''
@@ -38,8 +39,7 @@ class Menu:
                 else:
                     self.menu_text(35, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 350 + 55 * i))
 
-            for i in range(len(TUTORIAL_TEXT)):
-                self.menu_text(15, TUTORIAL_TEXT[i], COLOR_WHITE, (100, 460 + 20 * i))
+            self.menu_text(20, TUTORIAL_TEXT, COLOR_GREY, ((WIN_WIDTH / 2), 350 + 100 * i))
 
             pygame.display.flip()
 
@@ -70,10 +70,3 @@ class Menu:
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
-
-
-    #def tutorial(self, ):
-    #    pass
-
-    #def exit(self, ):
-    #    pass
