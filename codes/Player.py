@@ -9,6 +9,11 @@ class Player(Entity):
     def __init__(self, name: str, position: tuple):
         super().__init__(name, position)
 
+        self.speed = 5
+        self.totalFrames = 4
+        self.frameWidth = self.surf.get_width() // self.totalFrames
+        self.frameHeight = self.surf.get_height()
+
     def move(self):
         pressed_keys = pygame.key.get_pressed()
         if pressed_keys[pygame.K_UP] and self.rect.top > 0:

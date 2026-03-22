@@ -26,6 +26,6 @@ class EntityFactory:
             case 'Player':
                 return Player('Player', (10, (WIN_HEIGHT / 2)))
             case 'FlowerXP':
-                return FlowerXP('FlowerXP', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))
+                return FlowerXP('FlowerXP', (WIN_WIDTH + 10, random.randint(100, WIN_HEIGHT - 300)))
             case 'Enemy':
-                return Enemy('Enemy', (WIN_WIDTH + 10, random.randint(40, WIN_HEIGHT - 40)))
+                return Enemy('Enemy', (WIN_WIDTH + 10, random.randint(100, WIN_HEIGHT - 300)))
